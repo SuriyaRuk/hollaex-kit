@@ -2,7 +2,7 @@ version: '3'
 name: "client"
 services:
   hollaex-kit-web:
-    image: hollaex-kit-web
+    #    image: hollaex-kit-web
     build:
       context: .
       dockerfile: docker/Dockerfile
@@ -11,10 +11,5 @@ services:
       - .env
     ports: 
       - 8080:80 
-    networks:
-      - local_hollaex-kit-network
       
-networks:
-  local_hollaex-kit-network:
-    external: true
 
